@@ -1,0 +1,544 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Virtual Reality</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/frontclub.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal front-club">
+      <div class="logo">
+        <img src="assets/frontclub.svg" class="img--logo"/>
+      </div>
+			<div class="slides">
+				<section>
+					<section>
+            <div class="header">
+              <img src="assets/googleCardboard.png" class="img--main"/>
+            </div>
+						<h1>
+							Virtual Reality
+						</h1>
+					</section>
+					<section>
+						<h2>
+							Co to jest?
+						</h2>
+						<p class="u-color-black">
+              Technologia generująca w pełni sztuczne otoczenie.<br>
+              W skład wchodzi emisja obrazu, dźwięku, dotyku, zapachu i smaku.
+						</p>
+					</section>
+					<section>
+						<h2>
+							Od kiedy?
+						</h2>
+						<p class="u-color-black">
+              Myron W. Krueger - prekursora zjawiska VR.<br>
+              W 1969 wykonał projekty "Glowflow", który składał się z zaciemnionego pomieszczenia,
+              czterech przezroczystych rur i cząsteczek fluorescencyjnych zmieniających kolor.
+              Dodatkowo towarzyszył temu efekt dźwiękowy.
+						</p>
+					</section>
+					<section>
+						<h2>
+							Zastosowanie
+						</h2>
+						<p class="u-color-black">
+              <ul class="u-color-black">
+                <li>
+                  symulatory
+                  <span class="u-color-grey">
+                    (np. sterowanie samolotów)
+                  </span>
+                </li>
+                <li>
+                  rozrywka
+                  <span class="u-color-grey">
+                    (np. gry komputerowe)
+                  </span>
+                </li>
+                <li>
+                  leczenie fobii
+                  <span class="u-color-grey">
+                    (np. lęku wysokości)
+                  </span>
+                </li>
+                <li>
+                  szkolenia zawodowe
+                  <span class="u-color-grey">
+                    (np. operacje medyczne)
+                  </span>
+                </li>
+                <li>
+                  turystyka
+                  <span class="u-color-grey">
+                      (np. wirtualne podróże)
+                    </span>
+                </li>
+              </ul>
+						</p>
+					</section>
+					<section>
+						<h2>
+							Urządzenia
+						</h2>
+						<ul class="u-color-black">
+                <li>
+                  konsole do gier
+                  <span class="u-color-grey">
+                    (np. PlayStation VR)
+                  </span>
+                </li>
+                <li>
+                  okulary VR
+                  <span class="u-color-grey">
+                    (np. Google Cardboard)
+                  </span>
+                </li>
+                <li>
+                  kontrolery ruchu
+                </li>
+              </ul>
+          </section>
+          <section>
+            <h2>
+              Jak użyć?
+            </h2>
+          </section>
+					<section data-background="assets/googlecardboard.jpg">
+          </section>
+          <section>
+            <img src="assets/cardboard-example.jpg">
+          </section>
+				</section>
+				<section>
+					<section>
+						<h1>
+							Rodzina
+						</h1>
+					</section>
+					<section>
+						<h2>
+							Augmented Reality (AR)
+						</h2>
+						<p class="u-color-black">
+							Rzeczywistość rozszerzona
+						</p>
+					</section>
+					<section>
+						<h2>
+							Mixed Reality (MR)
+						</h2>
+						<p class="u-color-black">
+							Rzeczywistość mieszana
+						</p>
+					</section>
+				</section>
+				<section>
+          <section>
+            <h1>
+              Jak to działa?
+            </h1>
+          </section>
+				  <section>
+            <h2>
+              WebGL
+            </h2>
+            <ul class="u-color-black">
+              <li>
+                zapewnia dostęp do API 3D
+              </li>
+              <li>
+                bazuje na OpenGL ES (API dla grafiki 3D)
+              </li>
+              <li>
+                wykorzystuje elementy Canvas
+              </li>
+            </ul>
+          </section>
+				  <section>
+            <h2>
+              WebVR
+            </h2>
+            <p class="u-color-black">
+              API zapewniające wsparcie dla urządzeń wirtualnej rzeczywistości.
+            </p>
+            <ul class="u-color-black">
+              <li>
+                wykrycie dostępnych urządzeń VR
+              </li>
+              <li>
+                zdiagnozowanie możliwości urządzenia
+              </li>
+              <li>
+                sprawdzenie położenia i orientacji urządzenia
+              </li>
+              <li>
+                rysowanie elementów na urządzeniu (canvas)
+              </li>
+            </ul>
+            <aside class="notes">
+                rysowanie z odpowiednią częstotiliwością oświezania liczby klatek na sekundę
+            </aside>
+          </section>
+				  <section>
+            <h2>
+              Wymagania
+            </h2>
+            <p class="u-color-black">
+              Urządzenia z kartą graficzną wspierającą min. OpenGL 2.0.
+            </p>
+            <aside class="notes">
+                Urządzenia mogą rysować wtedy grafikę za pomocą procesora graficznego w innym przypadku możliwe jest rysowanie grafiki programowo.
+            </aside>
+          </section>
+				  <section>
+            <h2>
+              Dodatkowe wymagania
+            </h2>
+            <ul class="u-color-black">
+              <li>
+                wbudowany żyroskop
+              </li>
+              <li>
+                wbudowany akcelerometr
+              </li>
+            </ul>
+          </section>
+				</section>
+				<section>
+          <section>
+            <div class="header">
+              <img src="assets/react.svg" class="img--main"/>
+            </div>
+            <h1 class="u-color-black">
+              React VR
+            </h1>
+          </section>
+          <section>
+            <h2>
+              Wprowadzenie
+            </h2>
+            <ul class="u-color-black">
+              <li>
+                udostępnia CLI - "react-vr-cli"
+              </li>
+              <li>
+                bazuje na strukturze React / React Native
+              </li>
+              <li>
+                szybkie i przyjemne wejście
+              </li>
+              <li>
+                <a href="https://facebook.github.io/react-vr/" target="_blank">
+                  dokumentacja
+                </a>
+              </li>
+            </ul>
+          </section>
+				  <section>
+            <h2>
+              Przykłady
+            </h2>
+            <ul class="u-color-black">
+              <li>
+                <a href="https://www.facebook.com/jauntvr/videos/1470912893003205/" target="_blank">
+                  Filmy/zdjęcia 360 na facebooku
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/sebastianmusial/Virtual-Reality/tree/react-vr/panorama-360" target="_blank">
+                  Animowana panorama 360 (kod źródłowy)
+                </a>
+              </li>
+            </ul>
+          </section>
+				  <section>
+            * Korzysta z ThreeJS
+          </section>
+        </section>
+				<section>
+          <section>
+            <div class="header">
+              <img src="assets/aframe.png" class="img--main"/>
+            </div>
+            <h1 class="u-color-black">
+              A-Frame
+            </h1>
+          </section>
+          <section>
+            <h2>
+              Wprowadzenie
+            </h2>
+            <ul class="u-color-black">
+              <li>
+                framework łatwy w obsłudze
+              </li>
+              <li>
+                wbudowany inspektor sceny
+              </li>
+              <li>
+                <a href="https://aframe.io/aframe-registry/" target="_blank">
+                  baza gotowych komponentów
+                </a>
+              </li>
+              <li>
+                <a href="http://swimminglessonsformodernlife.com/aframe-motion-capture-components/examples/replay.html" target="_blank">
+                  integracja z kontrolerami
+                </a>
+              </li>
+              <li>
+                <a href="https://aframe.io/docs/" target="_blank">
+                  dobra dokumentacja
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>
+              Przykłady
+            </h2>
+            <ul class="u-color-black">
+              <li>
+                <a href="https://aframe.io/examples/showcase/videosphere/" target="_blank">
+                  Filmy/zdjęcia 360
+                </a>
+              </li>
+              <li>
+                <a href="http://swimminglessonsformodernlife.com/aframe-motion-capture-components/examples/replay.html" target="_blank">
+                  Integracja z kontrolerami
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/sebastianmusial/Virtual-Reality/tree/aframe/panorama-360" target="_blank">
+                  Animowana panorama 360 (kod źródłowy)
+                </a>
+              </li>
+              <li>
+                <a href="https://quick-app-97467.firebaseapp.com/" target="_blank">
+                  Biblioteka plików sferycznych
+                </a>
+              </li>
+            </ul>
+          </section>
+				  <section>
+            * Korzysta z ThreeJS
+          </section>
+				</section>
+				<section>
+          <section>
+            <div class="header">
+                <img src="assets/threeJS.jpg" class="img--main"/>
+              </div>
+              <h1 class="u-color-black">
+                Three JS
+              </h1>
+          </section>
+          <section>
+            <h2>
+              Wprowadzenie
+            </h2>
+            <ul class="u-color-black">
+              <li>
+                biblioteka trudniejsza w obsłudze
+              </li>
+              <li>
+                niższego poziomu, bez ograniczeń
+              </li>
+              <li>
+                wsparcie przy tworzeniu zaawansowanych scen 3D
+              </li>
+              <li>
+                <a href="https://threejs.org/docs/" target="_blank">
+                  dobra dokumentacja
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>
+              Przykłady
+            </h2>
+            <ul class="u-color-black">
+              <li>
+                <a href="https://threejs.org/examples/" target="_blank">
+                  baza przykładów
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/sebastianmusial/Virtual-Reality/tree/three-js/panorama-360" target="_blank">
+                  animowana panorama 360 (kod źródłowy)
+                </a>
+              </li>
+            </ul>
+          </section>
+				</section>
+				<section>
+				  <section>
+            <h1>
+              Napiszmy coś
+            </h1>
+          </section>
+				  <section>
+            <h2>
+              Minecraft VR
+            </h2>
+            <p class="u-color-black">
+              Wykorzystując framework A-frame, stwórzmy scenę, która będzie składała się z podstawowych elementów symulujących uproszczoną wersję gry minecraft.
+            </p>
+          </section>
+				  <section>
+            <h2>
+              1. Powierzchnia
+            </h2>
+            <p class="u-color-black">
+              Element na scenie, który posłuży jako podłoże.
+            </p>
+            <p>
+              <span class="u-color-black">
+                Komponenty:
+              </span>
+              a-scene, a-cylinder.
+            </p>
+          </section>
+				  <section>
+            <h2>
+              2. Otoczenie
+            </h2>
+            <p class="u-color-black">
+              Element będący tłem sceny.
+            </p>
+            <p>
+              <span class="u-color-black">
+                Komponent:
+              </span>
+              a-sky
+            </p>
+          </section>
+				  <section>
+            <h2>
+              3. Pudło
+            </h2>
+            <p class="u-color-black">
+              Dodajmy sześcian, który będzie się animował.
+            </p>
+            <p>
+              <span class="u-color-black">
+                Komponent:
+              </span>
+              a-entity, a-mixin, a-assets, a-animation
+            </p>
+          </section>
+				  <section>
+            <h2>
+              4. Oświetlenie
+            </h2>
+            <p class="u-color-black">
+              Wprowadźmy oświetlenie nadające efekt dnia i nocy.
+            </p>
+            <p>
+              <span class="u-color-black">
+                Komponent:
+              </span>
+              a-light, a-animation
+            </p>
+          </section>
+				  <section>
+            <h2>
+              5. Dodawanie sześcianów
+            </h2>
+            <p class="u-color-black">
+              Wprowadzić możliwość dodawania szcześcianów<br>
+              w wybranym przez uytkownika miejscu.
+            </p>
+            <p>
+              <span class="u-color-black">
+                Komponent:
+              </span>
+              a-entity, a-camera, a-cursor
+            </p>
+          </section>
+				</section>
+				<section>
+				  <section>
+            <h1>
+              Więcej info
+            </h1>
+				  </section>
+				  <section>
+            <h2>
+              Dokumentacje
+            </h2>
+            <ul class="u-color-black">
+              <li>
+                <a href="https://threejs.org/docs/" target="_blank">
+                  https://threejs.org/docs/
+                </a>
+              </li>
+              <li>
+                <a href="https://aframe.io/docs/" target="_blank">
+                  https://aframe.io/docs/
+                </a>
+              </li>
+              <li>
+                <a href="https://facebook.github.io/react-vr/" target="_blank">
+                  https://facebook.github.io/react-vr/
+                </a>
+              </li>
+            </ul>
+				  </section>
+				  <section>
+            <h2>
+              Alternatywy
+            </h2>
+            <ul class="u-color-black">
+              <li>
+                <a href="http://scenejs.org/" target="_blank">
+                  http://scenejs.org/
+                </a>
+              </li>
+              <li>
+                <a href="http://www.glge.org/" target="_blank">
+                  http://www.glge.org/
+                </a>
+              </li>
+            </ul>
+				  </section>
+				</section>
+				<section>
+          <a class="none" href="https://github.com/sebastianmusial/Virtual-Reality" target="_blank">
+            <img src="assets/github.png" class="img--small"/>
+          </a>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,103 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:100,400,700&subset=latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin-ext);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Lato', sans-serif;
+$mainColor: #d42974;
+$headingFont: 'News Cycle', Impact, sans-serif;
+$headingColor: #d42974;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: #d42974;
+$linkColorHover: #d42974;
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+$textColor: #404040;
+
+.reveal.front-club {
+	font-size: 28px;
+
+	.progress {
+		height: 10px;
+	}
+
+	.u-uppercase {
+		text-transform: uppercase;
+	}
+
+	.u-color-black {
+		color: $textColor;
+  }
+
+	.u-color-grey {
+		color: rgba($textColor, .5);
+  }
+
+  img.img--main {
+    border: 0;
+    box-shadow: none;
+    max-height: 120px;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-width: 100px;
+    padding: 20px 10px;
+  }
+
+  .headline--bg {
+    background-color: rgba(0,0,0,.5);
+    display: inline;
+    padding: 20px;
+    color: rgba(255,255,255,1);
+  }
+
+  img {
+    border: 0;
+
+    &.img--small {
+      max-height: 100px;
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  a {
+    border-bottom: 2px dashed rgba(#d42974, .3);
+    transition: all .2s ease;
+
+    &:hover {
+      border-bottom: 2px dashed rgba(#d42974, 1);
+    }
+  }
+
+  a.none {
+    border: 0;
+  }
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
