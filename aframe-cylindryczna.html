@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Panorama cylindryczna - aframe</title>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="panorama" src="assets/images/panorama-cylindryczna.jpg">
+        </a-assets>
+        <a-curvedimage 
+            src="#panorama"
+            height="75"
+            theta-length="360"
+            radius="40"
+        >
+            <a-animation 
+                attribute="rotation"
+                easing="linear"
+                dur="70000"
+                from="0 0 0"
+                to="0 360 0"
+                repeat="indefinite"
+            ></a-animation>
+        </a-curvedimage>
+    </a-scene>
+    <script src="assets/js/aframe-master.js"></script>
+</body>
+</html>
